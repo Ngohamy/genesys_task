@@ -24,7 +24,6 @@ public static class InvalidInputException extends RuntimeException {
 
 public static void backtrack(String combination, String followingNum) {
         if (followingNum.length() != 0) {
-            //char n = followingNum.charAt(0);
             if (!buttonMap.containsKey(followingNum.charAt(0))) {
                 throw new InvalidInputException("Invalid digit: " + followingNum.charAt(0));
             }
