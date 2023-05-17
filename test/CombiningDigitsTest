@@ -1,0 +1,22 @@
+package project_digits;
+
+import java.util.*;
+import org.*;
+
+class CombiningDigitsTest{
+
+@Test
+public void testLetterCombinations() {
+    CombiningDigits combinations = new CombiningDigits();
+        
+    List<String> expected = Arrays.asList("ad","ae","af","bd","be","bf","cd","ce","cf");
+    List<String> actual = combinations.letterCombinations("23");
+        
+    assertEquals(expected, actual);
+}
+
+@Test
+public void testInvalidInput() {
+    assertThrows(InvalidInputException.class, () -> CombiningDigits.letterCombinations("1"));
+    }
+}
